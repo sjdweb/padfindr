@@ -1,12 +1,21 @@
 PadFindr
 ========
 
-A simple ruby exercise to display a list of properties, and nearby ones when viewing one.
+A simple ruby exercise to display a list of properties, and nearby properties when viewing one.
+
+Run
+---
 
 To get it running, use Ruby 1.9.3
 
-`bundle install`
+```ruby
+bundle install
+```
 
-`rake db:setup`
+```ruby
+rake db:setup
+```
 
-`rails s`
+```ruby
+rails s
+```
