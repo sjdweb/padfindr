@@ -1,0 +1,24 @@
+<% content_for :title, "Pads" %>
+<h3>Pads</h3>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Bedroom count</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @pads.each do |pad| %>
+    <tr>
+      <td><%= pad.name %></td>
+      <td><%= pad.bedroom_count %></td>
+      <td><%= link_to 'Show', pad %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

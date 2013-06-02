@@ -1,0 +1,15 @@
+<% content_for :title, @pad.name %>
+<div class="span8">
+	<h3><%= @pad.name %></h3>
+	<strong>Bedroom(s):</strong> <%= @pad.bedroom_count %>
+	<div>
+		<img src="<%= @pad.map_img %>" alt="Map" />
+	</div>
+</div>
+
+<div class="span4">
+	<h3>Nearby Pads</h3>
+	<% @pad.nearby().each do |near_pad| %>
+		<%= link_to near_pad.name, pad_path(near_pad) %> <%= near_pad.distance_from(:location, @pad.location, {:unit => :km}).round(0) %> miles away <br />
+	<% end %>
+</div>
